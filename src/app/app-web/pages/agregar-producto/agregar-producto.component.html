@@ -1,0 +1,61 @@
+<section class="detalle-page section">
+  <div class="detalle-page container">
+    <div class="detalle-page__grid">
+      <figure class="detalle-page__img">
+        <img src="assets/img/product.jpg" alt="producto" />
+      </figure>
+      <div class="detalle-page__data">
+        <form class="form-agregar" [formGroup]="forma">
+          <div class="form__group">
+            <label class="label">Nombre</label>
+            <input
+              class="input"
+              type="text"
+              placeholder="Nombre"
+              formControlName="nombre"
+            />
+          </div>
+          <div class="form__group">
+            <label class="label">Descripción</label>
+            <textarea
+              formControlName="descripcion"
+              class="input"
+              cols="30"
+              rows="10"
+              placeholder="Descripción"
+            ></textarea>
+          </div>
+          <div class="form__group">
+            <label class="label">Precio</label>
+            <input
+              formControlName="precio"
+              class="input"
+              type="number"
+              placeholder="Precio"
+              min="0"
+              step="0.01"
+            />
+          </div>
+          <div class="form__group">
+            <label class="label">Stock</label>
+            <input
+              formControlName="stock"
+              class="input"
+              type="number"
+              placeholder="Stock"
+              min="0"
+            />
+          </div>
+          <div class="form__group">
+            <input
+              class="button"
+              type="submit"
+              value="Agregar Producto"
+              (click)="agregarProducto()"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

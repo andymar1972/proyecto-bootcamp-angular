@@ -1,0 +1,22 @@
+<section class="detalle-page section">
+  <div class="detalle-page container">
+    <div class="detalle-page__grid">
+      <figure class="detalle-page__img">
+        <img src="assets/img/product.jpg" alt="producto" />
+      </figure>
+      <div class="detalle-page__data">
+        <h2 class="title">{{ producto?.nombre }}</h2>
+        <p class="detalle-page__price">
+          S/ <span>{{ producto?.precio }}</span>
+        </p>
+        <p class="detalle-page__stock">
+          <span>{{ producto?.stock }}</span> unidades disponibles
+        </p>
+        <p class="detalle-page__description">
+          {{ producto?.descripcion }}
+        </p>
+        <a class="button" (click)="regresar()">Regresar</a>
+      </div>
+    </div>
+  </div>
+</section>

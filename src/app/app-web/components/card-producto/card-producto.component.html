@@ -1,0 +1,16 @@
+<a [routerLink]="['/detalle-producto', producto.id.toString()]">
+  <article class="card-product">
+    <figure class="card-product__img">
+      <img src="assets/img/product.jpg" alt="{{ producto?.nombre }}" />
+    </figure>
+    <p class="card-product__title">
+      {{ producto?.nombre }}
+    </p>
+    <span class="card-product__price"
+      >S/<span>{{ producto?.precio }}</span></span
+    >
+    <p class="card-product__stock">
+      <span> {{ producto?.stock }} </span> unidades
+    </p>
+  </article>
+</a>

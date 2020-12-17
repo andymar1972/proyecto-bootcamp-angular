@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "bootcamp-angular-everis": {
+      "hosting": {
+        "proyecto-bootcamp-angular": [
+          "bootcamp-angular-everis"
+        ]
+      }
+    }
+  }
+}

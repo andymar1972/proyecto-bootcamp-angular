@@ -1,0 +1,44 @@
+<div class="banner">
+  <div class="banner__slider">
+    <picture class="banner__img">
+      <source media="(max-width: 480px)" srcset="assets/img/banner.jpg" />
+      <source
+        media="(max-width: 900px)"
+        srcset="assets/img/banner-tablet.jpg"
+      />
+      <img src="assets/img/banner-desktop.jpg" alt="" />
+    </picture>
+  </div>
+  <button class="banner__prev"><i class="fas fa-angle-left"></i></button>
+  <button class="banner__next"><i class="fas fa-angle-right"></i></button>
+</div>
+<section class="promotions-layout section">
+  <div class="promotions__container container">
+    <h2 class="title">Productos</h2>
+    <p class="subtitle">Tenemos las mejores promociones para ti</p>
+    <div class="promotions-layout__grid">
+      <app-card-producto
+        *ngFor="let producto of productos"
+        [producto]="producto"
+        [id]="producto.id"
+      ></app-card-producto>
+    </div>
+    <a class="promotions-layout__button button-long" [routerLink]="[ '/agregar-producto']"
+      >Agregar Producto <i class="fas fa-chevron-circle-right"></i
+    ></a>
+  </div>
+</section>
+<section class="location-layout section">
+  <div class="location__container container">
+    <h2 class="title">Ubícanos</h2>
+  </div>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.0248896585254!2d-79.0208781852198!3d-8.098943794169323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d89f9a6a815%3A0x813002e20fc27bd4!2sITN%20-%20CIBERTEC!5e0!3m2!1ses!2spe!4v1599096338630!5m2!1ses!2spe"
+    class="location-layout__map"
+    frameborder="0"
+    style="border: 0"
+    allowfullscreen=""
+    aria-hidden="false"
+    tabindex="0"
+  ></iframe>
+</section>
