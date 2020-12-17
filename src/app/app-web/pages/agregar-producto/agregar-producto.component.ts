@@ -21,7 +21,7 @@ export class AgregarProductoComponent implements OnInit {
     this.forma = new FormGroup({
       nombre: new FormControl('', Validators.required),
       descripcion: new FormControl('', Validators.required),
-      precio: new FormControl('', Validators.required),
+      precio: new FormControl('', [Validators.required]),
       stock: new FormControl('', Validators.required),
     });
   }
